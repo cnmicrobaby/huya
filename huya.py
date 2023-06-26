@@ -1,7 +1,11 @@
 import os
-import requests
 from urllib import request
+
+import requests
 from bs4 import BeautifulSoup
+
+# from subprocess import call
+# from importlib import metadata as importlib_metadata
 
 if not os.path.exists('img'):
     os.mkdir('img')
@@ -24,3 +28,7 @@ for girl in girls:
     except Exception as e:
         print(e)
         print('error:', girl_title)
+
+# for dist in importlib_metadata.distributions():
+#     print("Updating for:", dist.metadata["Name"])  # 看进度用，非必需
+#     call("pip install -U " + dist.metadata["Name"], shell=True)
